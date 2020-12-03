@@ -1,0 +1,21 @@
+ALGORITHM tri
+VAR
+    tab : ARRAY_OF INTEGER[n];
+    i ,j:INTEGER;
+    maxi,aux:INTEGER;
+
+BEGIN
+    FOR i FROM 0 TO n-2 STEP 1  DO
+        maxi = i
+  for j from i + 1 to n - 1
+    IF (tab[j]>tab[maxi]) THEN
+          maxi = j
+    END_IF 
+    END_FOR
+    
+  aux =tab[maxi]
+  tab[maxi] = tab[i]
+  tab[i]=aux
+
+    
+END
